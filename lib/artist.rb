@@ -29,7 +29,7 @@ class Artist
     self.new(name) unless artist.name = name
     artist
       # binding.pry
-  
+
   end
 
 
