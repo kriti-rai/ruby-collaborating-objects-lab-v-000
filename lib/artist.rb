@@ -21,7 +21,7 @@ class Artist
   end
 
   def save
-    @@all << self
+    @@all << self unless @@all.include?(self)
   end
 
   def self.find_or_create_by_name(name)
@@ -40,3 +40,4 @@ class Artist
 
 
 end
+
