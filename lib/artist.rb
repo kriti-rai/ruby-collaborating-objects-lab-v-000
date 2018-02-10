@@ -31,7 +31,7 @@ class Artist
     # else
     #   self.new(artist_name)
     # end
-    self.new(artist_name) unless name==artist_name
+    self.new(artist_name) unless @@all.include?(artist)
       artist
 
   end
