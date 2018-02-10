@@ -1,0 +1,42 @@
+require 'pry'
+
+class Artist
+
+  attr_accessor :name, :songs
+
+  @@all = []
+
+  def initialize(name)
+    @name = name
+    @songs =[]
+  end
+
+  def add_song(song)
+    song.artist = self unless song.artist
+      @songs << song unless @songs.include?(song) #checks for duplicates
+  end
+
+  def self.all
+    @@all
+  end
+
+  def save
+    @@all << self unless @@all.include?(self)
+  end
+
+  def self.find_or_create_by_name(name)
+    artist = self.new(name)
+    self.new(name) unless artist.name = name
+    artist
+      # binding.pry
+  
+  end
+
+
+  def print_songs
+    self.songs.each {|song| puts song.name}
+    # binding.pry
+  end
+
+
+end
