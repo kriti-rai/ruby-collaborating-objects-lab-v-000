@@ -16,7 +16,7 @@ class MP3Importer
 
   def import
     self.files.collect {|filename| Song.new_by_filename(filename)}
-    binding.pry
+    # binding.pry
   end
 
 end
