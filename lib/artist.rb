@@ -24,10 +24,10 @@ class Artist
     @@all << self unless @@all.include?(self)
   end
 
-  def self.find_or_create_by_name(name)
+  def self.find_or_create_by_name(artist_name)
     artist = self.new(name)
-    self.new(name) unless artist.name
-    artist
+    self.new(artist_name) unless artist.name = artist_name
+      artist
       # binding.pry
 
   end
