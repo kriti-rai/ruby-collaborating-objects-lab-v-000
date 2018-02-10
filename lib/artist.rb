@@ -26,8 +26,10 @@ class Artist
 
   def self.find_or_create_by_name(artist_name)
     artist = self.new(name)
-    self.new(artist_name) unless artist.name == artist_name
+    if artist.name==artist.artist_name
       artist
+    else
+      self.new(artist_name)
       # binding.pry
 
   end
